@@ -1,0 +1,146 @@
+.sliders {
+	$self: &;
+	margin-bottom: 298px;
+	@include media ('<=md') {
+		margin-bottom: 98px;
+	}
+
+	&__inner {
+		max-width: 1455px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		max-width: 580px;
+		font-family: 'Times New Roman';
+		font-size: 53px;
+		line-height: 68px;
+		color: $title;
+		margin-bottom: 28px;
+		@include media('<=xs') {
+			font-size: 31px;
+			line-height: 47px;
+		}		
+	}
+
+	&__item-text {
+		font-family: 'SUSB', sans-serif;
+		@extend %default-font;
+		margin-bottom: 44px;
+		@include media('<=lg') {
+			max-width: 100%;
+		}		
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		@include media('<=lg') {
+			flex-wrap: wrap;
+		}		
+	}
+	
+	&__item-img {
+		object-fit: cover;
+		width: 100%;
+	}
+
+	&__item-images {
+		flex: 1 1 890px;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		@include media('<=xs') {
+			flex-wrap: wrap;
+		}
+	}
+	
+	&__item {
+		margin-right: 21px;
+		&_center {
+			align-self: center;
+			margin-top: -200px;
+			@include media('<=lg') {
+				margin-top: 0;
+			}
+			@include media('<=xs') {
+				margin-right: 0;
+				width: 100%;
+			}
+		}
+	}
+	
+	&__item:last-child {
+		@include media('<=lg') {
+			margin-top: 0;
+			margin-right: 0;
+		}
+		@include media('<=xs') {
+			width: 100%;
+		}
+	}
+	
+
+	&__item-right {
+		flex: 1 1 560px;
+		flex-direction: column;
+		display: flex;
+		@include media('<=lg') {
+			flex-flow: column wrap;
+			max-width: none;
+			align-items: center;
+		}
+	}
+
+	&__item-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 0 10px 0 75px;
+		@include media ('<=xlg'){
+			padding: 0;
+		}
+		@include media ('<=lg'){
+			padding: 0 10px 0 75px;
+		}
+		@include media ('<=md'){
+			padding: 0;
+		}
+	}
+
+	&__item-button {
+		margin-bottom: 89px;
+		text-transform: uppercase;
+		font-family: 'SUR', sans-serif;
+		font-size: 14px;
+		line-height: 32px;
+		letter-spacing: 0.25px;
+		color:#242423;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		&::after {
+			margin-left: 21px;
+			display: block;
+			content: '';
+			width: 29px;
+			height: 9px;
+			background: url(images/ic-arrow-next.svg) center center/29px 9px no-repeat transparent;
+		}
+		@include media('<=xlg'){
+			margin-bottom: 39px;
+		}
+	}
+
+	&__item-rightimg {
+		flex: 0 0 50%;
+		// justify-content: flex-start;
+		// padding-right: 80px;
+		@include  media ('<=md') {
+			padding-right: 0;
+		}
+	}
+
+}

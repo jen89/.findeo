@@ -1,0 +1,139 @@
+.welcome {
+	$self: &;
+	margin: 0 auto 145px;
+	max-width: 1250px;
+	padding: 0 15px;
+	position: relative;
+	@include media ('<=md') {
+		margin-bottom: 45px;
+	}
+
+	&__inner {
+		padding-left: 106px;
+		@include media ('<=xs') {
+			padding-left: 46px;
+		}
+		@include media ('<=xxs') {
+			padding-left: 0;
+		}
+		&::before {
+			content: '';
+			border-right: 3px solid $orange;
+			height: 570px;
+			position: absolute;
+			left: 0;
+			top: -40%;
+			z-index: 10;
+			@include media ('<=xxlg') {
+				display: none;
+			}
+
+		}
+		
+	}
+	
+	&__subtitle {
+		font-size: 19px;
+		line-height: 23px;
+		letter-spacing: 1.19px;
+		font-family: 'SUSB', sans-serif;
+		color: $orange;
+		margin-bottom: 40px;
+		@include media ('<=sm') {
+			margin-bottom: 20px;
+			font-size: 17px;
+			line-height: 21px;
+		}
+	}
+
+	&__title {
+		font-size: 57px;
+		line-height: 69px;
+		letter-spacing: 0.19px;
+		font-family: 'Times New Roman';
+		font-weight: 400;
+		color: $title;
+		margin-bottom: 111px;
+		max-width: 778px;
+		@include media ('<=md') {
+			font-size: 47px;
+			line-height: 49px;
+		}
+		@include media ('<=xs') {
+			font-size: 31px;
+			line-height: 43px;
+			margin-bottom: 61px;
+		}
+		@include media ('<=xxs') {
+		    font-size: 27px;
+			line-height: 39px;
+			margin-bottom: 31px;
+		} 
+		span {
+			color: $orange;
+		}
+	}
+	
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	
+	&__info {
+		max-width: 664px;
+		@include media ('<=xxlg') {
+			max-width: none;
+		}
+	}
+	
+	&__item {
+		font-size: 22px;
+		line-height: 25px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 47px;
+		margin-bottom: 51px;
+		@include media ('<=sm') {
+			margin-bottom: 26px;
+		}
+	}
+	
+	&__item-buying::before {
+		content: '';
+		background: url(images/ic-key.svg) top center no-repeat transparent;
+		width: 47px;
+		height: 47px;
+		margin-right: 43px;
+	}
+	
+	&__item-renting::before {
+		content: '';
+		background: url(images/ic-buildings.svg) top center no-repeat transparent;
+		width: 47px;
+		height: 47px;
+		margin-right: 43px;
+	}
+	
+	&__item-selling::before {
+		content: '';
+		background: url(images/ic-rent.svg) top center no-repeat transparent;
+		width: 47px;
+		height: 47px;
+		margin-right: 43px;
+	}
+	
+	
+	
+	&__text {
+		font-family: 'SUR', sans-serif;
+		margin-bottom: 33px;
+		@extend %default-font;
+		@include media ('<=sm') {
+			margin-bottom: 23px;
+		}
+	}
+	
+}
