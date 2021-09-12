@@ -15,8 +15,9 @@ import "fancybox";
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        speed: 1200,
         autoplay: {
-            delay: 2000,
+            delay: 1500,
         },
         effect: 'fade',
         loop: true,
@@ -25,5 +26,7 @@ import "fancybox";
 
     // $('.header-slider__btnwatch').fancybox({});
     $('[data-fancybox]').fancybox({});
+
+
 
 })();

@@ -88,7 +88,7 @@
 	}
 
 	&__link {
-	margin-right: 43px;	
+		margin-right: 43px;	
 		&:hover {
 		color: $orange;
 		}
@@ -97,6 +97,7 @@
 	&__items {
 		display: flex;
 		margin-right: 20px;
+		box-shadow: 0 0 60px rgba($color: #000000, $alpha: 0.16);	
 		@include media ('<=sm') {
 			overflow-x: auto;
 		}
@@ -122,9 +123,9 @@
 		align-items: center;
 		justify-content: flex-start;
 		text-align: center;
-		box-shadow: 0 0 60px rgba($color: #000000, $alpha: 0.16);	
 		position: relative;
 		z-index: 0;
+		transition: height .3s ease;
 		@include media ('<=sm') {
 			min-width: 45%;
 			.featured__descr {
@@ -140,14 +141,16 @@
 		}
 
 		&:hover {
-			.featured__descr {
-				display: block;
-			}
+			box-shadow: 0 0 60px rgba($color: #000000, $alpha: 0.16);		
 			position: relative;
 			z-index: 1;
 			background-color: #fff;
 			transform: scale(1.2);
 			transition: backgound-color 0.5s;
+			.featured__descr {
+				display: block;
+			}
+
 			@include media ('<=xlg') {
 				transform: scale(1.1);
 			}
@@ -158,6 +161,7 @@
 	}
 	
 	&__item-content {
+		width: 100%;
 		padding: 50px 0 53px;
 		@include media ('<=sm') {
 			padding: 25px 27px;
