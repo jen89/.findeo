@@ -156,6 +156,7 @@
 			}
 			@include media ('<=sm') {
 				transform: none;
+				box-shadow: none;
 			}
 		}
 	}
